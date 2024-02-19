@@ -1,3 +1,6 @@
+/**
+ * A class for extendable height and width properties
+ */
 export class HeightWidth {
 
     constructor() {

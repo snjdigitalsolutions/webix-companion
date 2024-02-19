@@ -1,3 +1,6 @@
+/**
+ * Options for views which are categorized by view type
+ */
 export class ViewOptions {
 
     /**

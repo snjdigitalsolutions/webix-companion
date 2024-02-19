@@ -2,7 +2,6 @@ import assert from "node:assert";
 import {Menu} from "../main/js/modules/menu/Menu.js";
 import {ViewOptions} from "../main/js/modules/ViewOptions.js";
 import {Menuitem} from "../main/js/modules/menu/Menuitem.js";
-import {MenuType} from "../main/js/modules/menu/MenuType.js";
 
 describe('Test Group Name', function () {
     describe('#create', function () {

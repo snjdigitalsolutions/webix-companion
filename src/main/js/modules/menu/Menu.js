@@ -72,4 +72,8 @@ export class Menu extends HeightWidth {
         this.data.push(item);
     }
 
+    setAutoWidth(autowidth){
+        this.autowidth = autowidth;
+    }
+
 }

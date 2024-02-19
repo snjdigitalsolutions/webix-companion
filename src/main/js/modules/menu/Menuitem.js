@@ -1,3 +1,6 @@
+/**
+ * A menu item which 
+ */
 export class Menuitem {
 
     constructor(id, value) {

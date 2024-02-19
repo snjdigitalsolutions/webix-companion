@@ -1,3 +1,9 @@
+/**
+ * A base class for Webix pages which consists of a single row
+ * containing three columns. The left and right columns are 10
+ * pixels wide and the center column will fill the remaining
+ * space
+ */
 export class Basepage {
 
     constructor(containerName, id, baseContent) {

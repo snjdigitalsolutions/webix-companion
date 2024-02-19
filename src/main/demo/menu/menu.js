@@ -3,12 +3,14 @@ import {Menu} from "../../js/modules/menu/Menu.js";
 import {ViewOptions} from "../../js/modules/ViewOptions.js";
 import {Menuitem} from "../../js/modules/menu/Menuitem.js";
 
+// Create menu options
 let option1 = new Menuitem(1, "Option 1")
 let option2 = new Menuitem(2, "Option 2");
 option2.addItem(new Menuitem(2.1, 'Sub-option 2.1'));
 option2.addItem(Menuitem.separator());
 option2.addItem(new Menuitem(2.2, 'Sub-option 2.2'));
 
+// Create horizontal menu (default)
 let horizontalMenu = new Menu('horizontal');
 horizontalMenu.setWidth(900);
 horizontalMenu.setSubMenuPosition(ViewOptions.menuSubmenuPosition().bottom);
@@ -19,6 +21,7 @@ horizontalMenu.addListener(ViewOptions.menuEvents().onItemClick, function () {
 horizontalMenu.addMenuItem(option1);
 horizontalMenu.addMenuItem(option2);
 
+// Create vertical menu with same options
 let verticalMenu = new Menu('vertical');
 verticalMenu.setWidth(100);
 verticalMenu.setHeight(300);
