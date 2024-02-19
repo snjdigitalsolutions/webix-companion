@@ -1,28 +1,22 @@
+import {HeightWidth} from "../HeightWidth.js";
+
 /**
  * Webix menu object
  */
-export class Menu {
+export class Menu extends HeightWidth {
 
     constructor(id) {
+        super();
         this.view = 'menu';
         this.id = id;
     }
-
-    setWidth(width){
-        this.width = width
-    }
-
-    setHeight(height){
-        this.height = height;
-    }
-
 
     /**
      * Sets position of pull-down sub-menus that will appear on mouse over
      * @param position the position based on {@link ViewOptions}
      *
      */
-    setSubMenuPosition(position){
+    setSubMenuPosition(position) {
         this.subMenuPos = position;
     }
 
@@ -34,8 +28,8 @@ export class Menu {
      *
      * {@link https://docs.webix.com/desktop__menu.html}
      */
-    setType(subsign, height, width){
-        if (typeof subsign !== "undefined"){
+    setType(subsign, height, width) {
+        if (typeof subsign !== "undefined") {
             this.type = {};
             this.type.subsign = subsign;
         }
@@ -53,7 +47,7 @@ export class Menu {
      * Set the layout to be either horizontal or vertical
      * @param layout
      */
-    setLayout(layout){
+    setLayout(layout) {
         this.layout = layout;
     }
 
@@ -62,8 +56,8 @@ export class Menu {
      * @param event
      * @param method
      */
-    addListener(event, method){
-        if (this.hasOwnProperty('on')){
+    addListener(event, method) {
+        if (this.hasOwnProperty('on')) {
             this.on[event] = method;
         } else {
             this.on = {};
@@ -71,8 +65,8 @@ export class Menu {
         }
     }
 
-    addMenuItem(item){
-        if (!this.hasOwnProperty('data')){
+    addMenuItem(item) {
+        if (!this.hasOwnProperty('data')) {
             this.data = [];
         }
         this.data.push(item);
