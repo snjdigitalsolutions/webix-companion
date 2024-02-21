@@ -1,7 +1,7 @@
 import assert from "node:assert";
-import {Menu} from "../main/js/modules/menu/Menu.js";
-import {ViewOptions} from "../main/js/modules/ViewOptions.js";
-import {Menuitem} from "../main/js/modules/menu/Menuitem.js";
+import {Menu} from "../main/js/modules/webix/menu/Menu.js";
+import {ViewOptions} from "../main/js/modules/webix/ViewOptions.js";
+import {Menuitem} from "../main/js/modules/webix/menu/Menuitem.js";
 
 describe('Test Group Name', function () {
     describe('#create', function () {

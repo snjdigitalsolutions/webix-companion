@@ -11,6 +11,10 @@ export class Menu extends HeightWidth {
         this.id = id;
     }
 
+    setWidth(width){
+        this.width = width
+    }
+
     /**
      * Sets position of pull-down sub-menus that will appear on mouse over
      * @param position the position based on {@link ViewOptions}
@@ -72,8 +76,8 @@ export class Menu extends HeightWidth {
         this.data.push(item);
     }
 
-    setAutoWidth(autowidth){
-        this.autowidth = autowidth;
+    useAutoWidth(){
+        this.autowidth = true;
     }
 
 }

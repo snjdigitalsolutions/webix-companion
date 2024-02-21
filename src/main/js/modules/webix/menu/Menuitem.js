@@ -18,6 +18,10 @@ export class Menuitem {
         }
     }
 
+    disableMenuItem(){
+        this.disabled = true;
+    }
+
     static separator() {
         return {$template: "Separator"};
     }

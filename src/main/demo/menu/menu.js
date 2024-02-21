@@ -1,7 +1,7 @@
-import {Basepage} from "../../js/modules/Basepage.js";
-import {Menu} from "../../js/modules/menu/Menu.js";
-import {ViewOptions} from "../../js/modules/ViewOptions.js";
-import {Menuitem} from "../../js/modules/menu/Menuitem.js";
+import {Basepage} from "../../js/modules/webix/Basepage.js";
+import {Menu} from "../../js/modules/webix/menu/Menu.js";
+import {ViewOptions} from "../../js/modules/webix/ViewOptions.js";
+import {Menuitem} from "../../js/modules/webix/menu/Menuitem.js";
 
 // Create menu options
 let option1 = new Menuitem(1, "Option 1")
