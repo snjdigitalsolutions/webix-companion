@@ -1,7 +1,7 @@
 /**
  * A class for extendable height and width properties
  */
-export class HeightWidth {
+export class Sizeable {
 
     constructor() {
     }
@@ -20,6 +20,14 @@ export class HeightWidth {
      */
     setWidth(width) {
         this.width = width;
+    }
+
+    autowidth(){
+        this.autowidth = true;
+    }
+
+    borderless(){
+        this.borderless = true;
     }
 
 }

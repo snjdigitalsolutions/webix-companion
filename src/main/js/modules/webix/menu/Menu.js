@@ -1,9 +1,9 @@
-import {HeightWidth} from "../HeightWidth.js";
+import {Sizeable} from "../Sizeable.js";
 
 /**
  * Webix menu object
  */
-export class Menu extends HeightWidth {
+export class Menu extends Sizeable {
 
     constructor(id) {
         super();
@@ -76,7 +76,7 @@ export class Menu extends HeightWidth {
         this.data.push(item);
     }
 
-    useAutoWidth(){
+    autowidth(){
         this.autowidth = true;
     }
 
