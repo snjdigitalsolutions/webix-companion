@@ -1,15 +1,16 @@
 import {Sizeable} from "../Sizeable.js";
 
 /**
- * Module for Webix label view
+ * A class for a Webix <strong>Label</strong> component.
+ * {@link https://docs.webix.com/desktop__label.html}
  * @extends Sizeable
  */
 export class Label extends Sizeable {
 
     /**
      * Create a label
-     * @param id the label id
-     * @param label the text value of the label
+     * @param {number} id the label id
+     * @param {string} label the text value of the label
      */
     constructor(id, label) {
         super();

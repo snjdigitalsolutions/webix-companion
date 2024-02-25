@@ -1,7 +1,9 @@
 import {Sizeable} from "../Sizeable.js";
 
 /**
- * Webix menu object
+ * A class for the Webix <strong>Menu</string> widget.
+ * {@link https://docs.webix.com/desktop__menu.html}
+ * @extends Sizeable
  */
 export class Menu extends Sizeable {
 

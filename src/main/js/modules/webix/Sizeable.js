@@ -1,5 +1,6 @@
 /**
- * A class for extendable height and width properties
+ * A class for defining height and width properties.
+ * This class should be extended for use.
  */
 export class Sizeable {
 
@@ -8,7 +9,7 @@ export class Sizeable {
 
     /**
      * Set the height of the view
-     * @param height desired view height
+     * @param {number} height desired view height in pixels
      */
     setHeight(height) {
         this.height = height;
@@ -16,16 +17,24 @@ export class Sizeable {
 
     /**
      * Set the width of the view
-     * @param width desired view width
+     * @param {number} width desired view width in pixels
      */
     setWidth(width) {
         this.width = width;
     }
 
+    /**
+     * Enable autowidth for a view. When calling this method,
+     * the object has the property <strong>autowidth</strong> added and set true
+     */
     autowidth(){
         this.autowidth = true;
     }
 
+    /**
+     * Enable borderless for a view. When calling this method,
+     * the object has the property <strong>borderless</strong> added and set true
+     */
     borderless(){
         this.borderless = true;
     }
