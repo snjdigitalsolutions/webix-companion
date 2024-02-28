@@ -1,20 +1,19 @@
-import {Sizeable} from "../Sizeable.js";
+import {Identifiable} from "../extendable/Identifiable.js";
+import {Menuitem} from "./Menuitem.js";
 
 /**
  * A class for the Webix <strong>Menu</string> widget.
  * {@link https://docs.webix.com/desktop__menu.html}
- * @extends Sizeable
+ * @extends Identifiable
  */
-export class Menu extends Sizeable {
+export class Menu extends Identifiable {
 
+    /**
+     * @param {string} id
+     */
     constructor(id) {
-        super();
+        super(id);
         this.view = 'menu';
-        this.id = id;
-    }
-
-    setWidth(width){
-        this.width = width
     }
 
     /**
@@ -58,28 +57,14 @@ export class Menu extends Sizeable {
     }
 
     /**
-     * Add a listener to the view. The event is a string property
-     * @param event
-     * @param method
+     * Add menuitem to the menu
+     * @param {Menuitem} item
      */
-    addListener(event, method) {
-        if (this.hasOwnProperty('on')) {
-            this.on[event] = method;
-        } else {
-            this.on = {};
-            this.on[event] = method;
-        }
-    }
-
     addMenuItem(item) {
         if (!this.hasOwnProperty('data')) {
             this.data = [];
         }
         this.data.push(item);
-    }
-
-    autowidth(){
-        this.autowidth = true;
     }
 
 }

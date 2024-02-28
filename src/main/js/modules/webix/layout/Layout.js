@@ -1,14 +1,17 @@
-import {Sizeable} from "../Sizeable.js";
+import {Identifiable} from "../extendable/Identifiable.js";
 
 /**
  * A class for the Webix <strong>Layout</strong> widget
  * {@link https://docs.webix.com/desktop__components.html}
  * @extends Sizeable
  */
-export class Layout extends Sizeable {
+export class Layout extends Identifiable {
 
-    constructor() {
-        super();
+    /**
+     * @param {string} id
+     */
+    constructor(id) {
+        super(id);
     }
 
     /**

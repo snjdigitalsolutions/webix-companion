@@ -1,6 +1,6 @@
 import assert from "node:assert";
 import {Menu} from "../../main/js/modules/webix/menu/Menu.js";
-import {ViewOptions} from "../../main/js/modules/webix/ViewOptions.js";
+import {ViewOptions} from "../../main/js/modules/webix/enum/ViewOptions.js";
 import {Menuitem} from "../../main/js/modules/webix/menu/Menuitem.js";
 
 describe('Test Group Name', function () {

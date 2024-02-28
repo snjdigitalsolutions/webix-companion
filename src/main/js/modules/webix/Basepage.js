@@ -1,14 +1,16 @@
+import {Identifiable} from "./extendable/Identifiable.js";
+
 /**
  * A base class for pages which consists of a single row
  * containing three columns. The left and right columns are 10
  * pixels wide and the center column will fill the remaining
  * space.
  */
-export class Basepage {
+export class Basepage extends Identifiable {
 
-    constructor(containerName, id, baseContent) {
+    constructor(id, containerName, baseContent) {
+        super(id);
         this.containerName = containerName;
-        this.id = id;
         this.baseContent = baseContent;
     }
 

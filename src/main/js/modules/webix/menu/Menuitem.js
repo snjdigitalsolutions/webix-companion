@@ -1,13 +1,16 @@
+import {Identifiable} from "../extendable/Identifiable.js";
+
 /**
  * A class supporting the Webix <strong>Menu</string> widget.
  * This class makes is possible to add menu items to a Menu
  * widget.
  * {@link https://docs.webix.com/desktop__menu.html}
+ * @extends Identifiable
  */
-export class Menuitem {
+export class Menuitem extends Identifiable {
 
     constructor(id, value) {
-        this.id = id;
+        super(id);
         this.value = value;
     }
 
@@ -16,9 +19,8 @@ export class Menuitem {
      * possible to nest menu items.
      * @param {Menuitem} menuitem
      */
-    addItem(menuitem){
-        if (this.hasOwnProperty('submenu'))
-        {
+    addItem(menuitem) {
+        if (this.hasOwnProperty('submenu')) {
             this.submenu.push(menuitem);
         } else {
             this.submenu = [];
@@ -29,7 +31,7 @@ export class Menuitem {
     /**
      * Disables the menu item.
      */
-    disableMenuItem(){
+    disableMenuItem() {
         this.disabled = true;
     }
 

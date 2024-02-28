@@ -1,6 +1,6 @@
 import {Basepage} from "../../js/modules/webix/Basepage.js";
 import {Menu} from "../../js/modules/webix/menu/Menu.js";
-import {ViewOptions} from "../../js/modules/webix/ViewOptions.js";
+import {ViewOptions} from "../../js/modules/webix/enum/ViewOptions.js";
 import {Menuitem} from "../../js/modules/webix/menu/Menuitem.js";
 
 // Create menu options

@@ -1,22 +1,20 @@
-import {Sizeable} from "../Sizeable.js";
+import {Sizeable} from "../extendable/Sizeable.js";
+import {Identifiable} from "../extendable/Identifiable.js";
 
 /**
  * A class for a Webix <strong>Template</strong> widget.
  * {@link https://docs.webix.com/desktop__template.html}
  * @extends Sizeable
  */
-export class Template extends Sizeable {
+export class Template extends Identifiable {
 
     /**
      * Instantiate a template with given id.
      * @param {string} id the id for the template
      */
     constructor(id) {
-        super();
+        super(id);
         this.view = "template";
-        if (id !== "undefined") {
-            this.id = id;
-        }
     }
 
     /**

@@ -1,7 +1,6 @@
 import assert from "node:assert";
 import {Layout} from "../../main/js/modules/webix/layout/Layout.js";
 
-
 describe('Layout Test', function () {
     let layout = new Layout();
     describe('#Test addRows', function () {

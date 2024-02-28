@@ -1,11 +1,10 @@
-import {Sizeable} from "../Sizeable.js";
-
+import {Identifiable} from "../extendable/Identifiable.js"
 /**
  * A class for a Webix <strong>Label</strong> component.
  * {@link https://docs.webix.com/desktop__label.html}
- * @extends Sizeable
+ * @extends Identifiable
  */
-export class Label extends Sizeable {
+export class Label extends Identifiable {
 
     /**
      * Create a label
@@ -13,9 +12,8 @@ export class Label extends Sizeable {
      * @param {string} label the text value of the label
      */
     constructor(id, label) {
-        super();
+        super(id);
         this.view = 'label';
-        this.id = id;
         this.label = label;
     }
 
