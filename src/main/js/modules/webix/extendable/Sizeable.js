@@ -1,10 +1,14 @@
+import {Actionalble} from "./Actionalble.js";
+
 /**
  * A class for defining height and width properties.
  * This class should be extended for use.
+ * @extends Actionalble
  */
-export class Sizeable {
+export class Sizeable extends Actionalble {
 
     constructor() {
+        super();
     }
 
     /**
@@ -37,6 +41,14 @@ export class Sizeable {
      */
     borderless(){
         this.borderless = true;
+    }
+
+    /**
+     * Disabled the view.When calling this method,
+     * the object has the property <strong>disabled</strong> added and set true
+     */
+    disabled(){
+        this.disabled = true;
     }
 
 }

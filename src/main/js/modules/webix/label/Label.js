@@ -8,7 +8,7 @@ export class Label extends Identifiable {
 
     /**
      * Create a label
-     * @param {number} id the label id
+     * @param {string} id the label id
      * @param {string} label the text value of the label
      */
     constructor(id, label) {

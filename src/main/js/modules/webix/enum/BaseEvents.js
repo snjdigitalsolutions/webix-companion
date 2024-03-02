@@ -2,7 +2,8 @@ export class BaseEvents {
 
     static events() {
         return Object.freeze({
-            onChange: 'onChange'
+            onChange: 'onChange',
+            onItemClick: 'onItemClick'
         });
     }
 

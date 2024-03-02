@@ -1,5 +1,9 @@
 {
+  "plugins": [
+    "node_modules/jsdoc-class-hierarchy"
+  ],
   "opts": {
-    "template": "node_modules/jsdoc/templates/custom-jsdoc-template"
+    "template": "node_modules/jsdoc/templates/custom-jsdoc-template",
+    "class-hierarchy": { "showList": true }
   }
 }
