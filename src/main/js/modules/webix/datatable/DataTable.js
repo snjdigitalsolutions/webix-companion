@@ -24,8 +24,20 @@ export class DataTable extends Identifiable{
         this.fixedRowHeight = value;
     }
 
+    /**
+     * Prevent selections from being made in
+     * the table. This is the default behavior
+     */
     disableSelection(){
         this.select = false;
+    }
+
+    /**
+     * Set the URL in which data will be loaded from
+     * @param {string} url the URL to load data
+     */
+    setDataUrl(url){
+        this.url = url;
     }
 
 }

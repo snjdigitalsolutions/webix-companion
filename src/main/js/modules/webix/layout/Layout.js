@@ -6,7 +6,7 @@ import {Utility} from "../utility/Utility.js";
  * referencing a grid of rows and columns the row is always
  * indexed and created first.
  * {@link https://docs.webix.com/desktop__components.html}
- * @extends Sizeable
+ * @extends Identifiable
  */
 export class Layout extends Identifiable {
 
