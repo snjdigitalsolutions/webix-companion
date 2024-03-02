@@ -33,4 +33,12 @@ export class ViewOptions {
         });
     }
 
+    static datatableSelect(){
+        return Object.freeze({
+            cell: 'cell',
+            row: 'row',
+            column: 'column'
+        });
+    }
+
 }

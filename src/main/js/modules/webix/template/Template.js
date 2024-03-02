@@ -1,10 +1,10 @@
-import {Sizeable} from "../extendable/Sizeable.js";
+import {Styleable} from "../extendable/Styleable.js";
 import {Identifiable} from "../extendable/Identifiable.js";
 
 /**
  * A class for a Webix <strong>Template</strong> widget.
  * {@link https://docs.webix.com/desktop__template.html}
- * @extends Sizeable
+ * @extends Styleable
  */
 export class Template extends Identifiable {
 

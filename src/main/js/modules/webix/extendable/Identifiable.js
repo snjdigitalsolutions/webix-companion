@@ -1,12 +1,12 @@
-import {Sizeable} from "./Sizeable.js";
+import {Styleable} from "./Styleable.js";
 
 /**
  * Makes it possible to apply an ID to an object
  * during instantiation. This class should be
  * extended for use.
- * @extends Sizeable
+ * @extends Styleable
  */
-export class Identifiable extends Sizeable {
+export class Identifiable extends Styleable {
 
     /**
      * @param {string} id

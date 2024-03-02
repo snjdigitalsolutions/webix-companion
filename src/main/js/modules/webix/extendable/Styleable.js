@@ -5,7 +5,7 @@ import {Actionalble} from "./Actionalble.js";
  * This class should be extended for use.
  * @extends Actionalble
  */
-export class Sizeable extends Actionalble {
+export class Styleable extends Actionalble {
 
     constructor() {
         super();
