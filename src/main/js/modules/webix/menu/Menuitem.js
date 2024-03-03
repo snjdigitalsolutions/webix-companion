@@ -12,6 +12,7 @@ export class Menuitem extends Identifiable {
     constructor(id, value) {
         super(id);
         this.value = value;
+        this.disabled = false;
     }
 
     /**

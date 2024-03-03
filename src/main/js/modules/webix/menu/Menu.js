@@ -34,16 +34,16 @@ export class Menu extends Identifiable {
      * {@link https://docs.webix.com/desktop__menu.html}
      */
     setType(subsign, height, width) {
-        if (typeof subsign !== "undefined") {
+        if (typeof subsign !== undefined) {
             this.type = {};
             this.type.subsign = subsign;
         }
 
-        if (typeof height !== "undefined") {
+        if (typeof height !== undefined) {
             this.type.height = height;
         }
 
-        if (typeof width !== "undefined") {
+        if (typeof width !== undefined) {
             this.type.width = width;
         }
     }

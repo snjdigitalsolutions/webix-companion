@@ -13,7 +13,7 @@ export class Identifiable extends Styleable {
      */
     constructor(id) {
         super();
-        if (id !== "undefined") {
+        if (id !== undefined) {
             this.id = id;
         }
     }

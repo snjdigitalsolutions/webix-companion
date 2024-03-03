@@ -23,7 +23,7 @@ export class Layout extends Identifiable {
      * @returns {Layout}
      */
     addRows(numRows) {
-        if (!this.hasOwnProperty('rows')){
+        if (!this.hasOwnProperty('rows')) {
             this.rows = [];
         }
         for (let i = 0; i < numRows; i++) {
@@ -33,18 +33,50 @@ export class Layout extends Identifiable {
     }
 
     /**
+     * Add empty rows to a specified column
+     * @param {number} numRows the number of rows to add
+     * @param {number} columnIndex the column index
+     */
+    addRowsToColumn(numRows, columnIndex) {
+        if (!this.hasOwnProperty("cols")) {
+            throw Error("No defined columns");
+        }
+        let column = this.cols[columnIndex];
+        column.rows = [];
+        for (let i = 0; i < numRows; i++) {
+            column.rows.push(new Layout());
+        }
+    }
+
+    /**
      * Add a number of columns to an object
      * @param {number} numColumns the number of columns
      * @returns {Layout}
      */
     addColumns(numColumns) {
-        if (!this.hasOwnProperty('cols')){
+        if (!this.hasOwnProperty('cols')) {
             this.cols = [];
         }
         for (let i = 0; i < numColumns; i++) {
             this.cols.push(new Layout());
         }
         return this;
+    }
+
+    /**
+     * A columns to a row
+     * @param {number} numCols the number of columns to add
+     * @param {number} rowIndex the index of the rows to add columns to
+     */
+    addColumnsToRow(numCols, rowIndex) {
+        if (!this.hasOwnProperty("rows")) {
+            throw Error("No defined rows");
+        }
+        let row = this.rows[rowIndex];
+        row.cols = [];
+        for (let i = 0; i < numCols; i++) {
+            row.cols.push(new Layout());
+        }
     }
 
     /**
@@ -57,11 +89,11 @@ export class Layout extends Identifiable {
      * @throws {Error} when rows or columns are already defined in the Layout
      */
     createGridLayout(rows, cols) {
-        if (this.hasOwnProperty("rows") || this.hasOwnProperty("cols")){
+        if (this.hasOwnProperty("rows") || this.hasOwnProperty("cols")) {
             throw new Error("Rows and columns already defined for layout.");
         }
         this.rows = [];
-        for (let i = 0; i < rows; i++){
+        for (let i = 0; i < rows; i++) {
             this.rows[i] = (new Layout()).addColumns(cols);
         }
         return this;
@@ -91,8 +123,8 @@ export class Layout extends Identifiable {
      * @param {Object} object the object being set to the row
      * @param {number} rowIndex the index of the row
      */
-    setObjectAtRow(object, rowIndex){
-        if (this.hasOwnProperty("rows")){
+    setObjectAtRow(object, rowIndex) {
+        if (this.hasOwnProperty("rows")) {
             this.rows[rowIndex] = object;
         } else {
             throw Error("Layout has no defined rows.");
@@ -104,8 +136,8 @@ export class Layout extends Identifiable {
      * @param {Object} object the object being set to the column
      * @param {number} colIndex the index of the column
      */
-    setObjectAtColumn(object, colIndex){
-        if (this.hasOwnProperty("cols")){
+    setObjectAtColumn(object, colIndex) {
+        if (this.hasOwnProperty("cols")) {
             this.cols[colIndex] = object;
         } else {
             throw Error("Layout has no defined columns.");
@@ -118,11 +150,11 @@ export class Layout extends Identifiable {
      * @param {number} colIndex the column index
      * @param {Object} object the object being set to the (row,column)
      */
-    setObjectAtRowAndColumn(rowIndex, colIndex, object){
-        if (this.hasOwnProperty('rows')){
+    setObjectAtRowAndColumn(rowIndex, colIndex, object) {
+        if (this.hasOwnProperty('rows')) {
             let row = this.rows[rowIndex];
-            if (row.hasOwnProperty("cols")){
-                row[colIndex] = object;
+            if (row.hasOwnProperty("cols")) {
+                row.cols[colIndex] = object;
             } else {
                 throw new Error('The row does not have columns defined.');
             }

@@ -51,7 +51,7 @@ export class DataTableColumn extends Identifiable {
     #createFilter(filter, placeholder) {
         let filterObject = {};
         filterObject.content = filter;
-        if (placeholder !== 'undefined') {
+        if (placeholder !== undefined) {
             filterObject.placeholder = placeholder;
         }
         return filterObject;
