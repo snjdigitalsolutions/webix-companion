@@ -33,11 +33,32 @@ export class DataTable extends Identifiable{
     }
 
     /**
+     * Set the selection type possible for the datatable.
+     * (e.g. row, cell, column)
+     * {@link ViewOptions.datatableSelect}
+     * @param {string} type the type of selection possible
+     */
+    setSelectionType(type){
+        this.select = type;
+    }
+
+    /**
      * Set the URL in which data will be loaded from
      * @param {string} url the URL to load data
      */
     setDataUrl(url){
         this.url = url;
+    }
+
+    /**
+     * Add a column to the data table
+     * @param {DataTableColumn} column the table column
+     */
+    addColumn(column){
+        if (!this.hasOwnProperty('columns')){
+            this.columns = [];
+        }
+        this.columns.push(column);
     }
 
 }

@@ -3,7 +3,8 @@ export class BaseEvents {
     static events() {
         return Object.freeze({
             onChange: 'onChange',
-            onItemClick: 'onItemClick'
+            onItemClick: 'onItemClick',
+            onAfterLoad: 'onAfterLoad'
         });
     }
 
