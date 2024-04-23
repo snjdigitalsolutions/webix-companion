@@ -19,6 +19,17 @@ export class DataTableColumn extends Identifiable {
     }
 
     /**
+     * Create a header with two lines of test
+     * @param {string} line1 first line of header
+     * @param {string} line2 second line of header
+     */
+    twoLineHeader(line1, line2){
+        this.header = [];
+        this.header.push(line1);
+        this.header.push(line2);
+    }
+
+    /**
      * Set the column header with search filter
      * @param {string} headerText the header text value
      * @param {string} filter the filter type obtained from {@link HeaderFilterTypes.type}

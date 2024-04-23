@@ -4,13 +4,13 @@ import {Identifiable} from "../extendable/Identifiable.js";
 /**
  * A class for a Webix <strong>Template</strong> widget.
  * {@link https://docs.webix.com/desktop__template.html}
- * @extends Styleable
+ * @extends Identifiable
  */
 export class Template extends Identifiable {
 
     /**
      * Instantiate a template with given id.
-     * @param {string} id the id for the template
+     * @param {string=} id the id for the template
      */
     constructor(id) {
         super(id);

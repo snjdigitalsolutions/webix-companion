@@ -12,6 +12,7 @@ export class Radio extends Identifiable {
      */
     constructor(id) {
         super(id);
+        this.view = 'radio';
     }
 
     /**

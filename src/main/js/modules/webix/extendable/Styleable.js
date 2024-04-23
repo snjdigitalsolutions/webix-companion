@@ -35,6 +35,10 @@ export class Styleable extends Actionalble {
         this.autowidth = true;
     }
 
+    autoheight(){
+        this.autoheight = true;
+    }
+
     /**
      * Enable borderless for a view. When calling this method,
      * the object has the property <strong>borderless</strong> added and set true
@@ -44,11 +48,18 @@ export class Styleable extends Actionalble {
     }
 
     /**
-     * Disabled the view.When calling this method,
+     * Disables the view.When calling this method,
      * the object has the property <strong>disabled</strong> added and set true
      */
     disabled(){
         this.disabled = true;
+    }
+
+    /**
+     * For a table column, have the column take up all available space
+     */
+    fillSpace(){
+        this.fillspace = true;
     }
 
 }

@@ -28,4 +28,13 @@ export class Button extends Identifiable {
         this.tooltip = tip;
     }
 
+    /**
+     * The name of the icon to show in the button
+     * @param {string} iconName name of the icon
+     */
+    setIcon(iconName){
+        this.type = 'icon';
+        this.icon = iconName;
+    }
+
 }
