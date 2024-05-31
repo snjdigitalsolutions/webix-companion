@@ -6,8 +6,8 @@ import {Identifiable} from "../extendable/Identifiable.js";
  */
 export class Button extends Identifiable {
 
-    constructor() {
-        super();
+    constructor(id) {
+        super(id);
         this.view = 'button';
     }
 

@@ -8,3 +8,9 @@ functionality is needed.
 You will notice the html pages in the demo directories have references to the Webix library. However, the library
 is not included in this repository. You can download the standard GPL licensed version of
 the library from [here](https://webix.com/get-webix-gpl/).
+
+## JSDOC
+To create documentation execute the following command:
+```bash
+jsdoc -c jsdoc-config.json -R jsdoc.md -r src/main/js/modules/webix/
+```

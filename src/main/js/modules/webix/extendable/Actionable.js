@@ -1,7 +1,7 @@
 /**
  *
  */
-export class Actionalble {
+export class Actionable {
 
     constructor() {
     }

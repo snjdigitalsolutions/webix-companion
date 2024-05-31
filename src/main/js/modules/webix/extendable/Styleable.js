@@ -1,11 +1,11 @@
-import {Actionalble} from "./Actionalble.js";
+import {Actionable} from "./Actionable.js";
 
 /**
  * A class for defining height and width properties.
  * This class should be extended for use.
- * @extends Actionalble
+ * @extends Actionable
  */
-export class Styleable extends Actionalble {
+export class Styleable extends Actionable {
 
     constructor() {
         super();

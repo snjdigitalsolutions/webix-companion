@@ -4,15 +4,12 @@
     "@babel/core": "^7.23.0",
     "@babel/preset-env": "^7.22.20",
     "@babel/register": "^7.22.15",
+    "jsdoc": "^4.0.3",
     "jsdoc-class-hierarchy": "^1.1.2",
-    "mocha": "^10.2.0",
-    "terser-webpack-plugin": "^5.3.9",
-    "webpack-cli": "^5.1.4"
+    "mocha": "^10.2.0"
   },
   "scripts": {
-    "test": "mocha --require @babel/register"
-  },
-  "dependencies": {
-    "jsdoc": "^4.0.2"
+    "test": "mocha --require @babel/register",
+    "docs": "jsdoc -c jsdoc-config.json"
   }
 }

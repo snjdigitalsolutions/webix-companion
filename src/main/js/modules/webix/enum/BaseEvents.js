@@ -4,7 +4,8 @@ export class BaseEvents {
         return Object.freeze({
             onChange: 'onChange',
             onItemClick: 'onItemClick',
-            onAfterLoad: 'onAfterLoad'
+            onAfterLoad: 'onAfterLoad',
+            onTimedKeyPress: 'onTimedKeyPress'
         });
     }
 
